@@ -60,7 +60,7 @@ public class FIRSTQR {
         JSONObject blue2 = new JSONObject("{\"Alliance Station\":\"Blue 2\"}");
         JSONObject blue3 = new JSONObject("{\"Alliance Station\":\"Blue 3\"}");
 
-        for(int i = 1; i < matchArray.length(); i++){
+        for(int i = 1; i <= matchArray.length(); i++){
             JSONObject match = (JSONObject) matchArray.get(i - 1);
             JSONArray teams = (JSONArray) match.get("teams");
 
@@ -87,6 +87,7 @@ public class FIRSTQR {
             // Add the blue 3 robot
             JSONObject B3team = (JSONObject) teams.get(5);
             blue3.put("" + match.get("matchNumber"), B3team.get("teamNumber"));
+            System.out.println(match);
         }
         // Create all 6 QR codes
         BitMatrix bitMatrixR1 = new QRCodeWriter().encode(red1.toString(), BarcodeFormat.QR_CODE, 750, 750);
