@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.0'
+    implementation 'org.json:json:20220924'
+    implementation 'com.google.zxing:zxing-parent:3.5.0'
+    implementation 'com.google.zxing:core:3.5.0'
+    implementation 'com.google.zxing:javase:3.5.0'
+}
+
+test {
+    useJUnitPlatform()
+}
