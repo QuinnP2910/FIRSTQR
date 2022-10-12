@@ -83,8 +83,8 @@ public class FIRSTQR {
         BitMatrix bitMatrixR2 = new QRCodeWriter().encode(red2.toString(), BarcodeFormat.QR_CODE, 750, 750);
         BitMatrix bitMatrixR3 = new QRCodeWriter().encode(red3.toString(), BarcodeFormat.QR_CODE, 750, 750);
         BitMatrix bitMatrixB1 = new QRCodeWriter().encode(blue1.toString(), BarcodeFormat.QR_CODE, 750, 750);
-        BitMatrix bitMatrixB2 = new QRCodeWriter().encode(blue1.toString(), BarcodeFormat.QR_CODE, 750, 750);
-        BitMatrix bitMatrixB3 = new QRCodeWriter().encode(blue1.toString(), BarcodeFormat.QR_CODE, 750, 750);
+        BitMatrix bitMatrixB2 = new QRCodeWriter().encode(blue2.toString(), BarcodeFormat.QR_CODE, 750, 750);
+        BitMatrix bitMatrixB3 = new QRCodeWriter().encode(blue3.toString(), BarcodeFormat.QR_CODE, 750, 750);
 
         // Create and save to all 6 paths using comp id and year
         Path pathR1 = Path.of("R1" + year + compID + ".png");
