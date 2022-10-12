@@ -26,7 +26,17 @@ public class FIRSTQR {
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 
         // Create Authentication variables
-        String userCredentials = APICredentials.USERNAME + ":" + APICredentials.API_KEY;
+        System.out.println("Log in with local APICredentials class? (y/n)");
+        String userCredentials;
+        if(Character.toLowerCase(sc.next().charAt(0)) == 'y'){
+            userCredentials = APICredentials.USERNAME + ":" + APICredentials.API_KEY;
+        } else {
+            System.out.print("Username: ");
+            String username = sc.next();
+            System.out.print("API Key: ");
+            String key = sc.next();
+            userCredentials = username + ":" + key;
+        }
         String basicAuth = "Basic " + new String(Base64.getEncoder().encode(userCredentials.getBytes()));
 
         // Add headers to the HTTP connection
