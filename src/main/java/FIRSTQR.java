@@ -43,12 +43,12 @@ public class FIRSTQR {
         JSONArray matchArray = (JSONArray) JSONResult.get("Schedule");
 
         // Create all 6 robot JSONs
-        JSONObject red1 = new JSONObject();
-        JSONObject red2 = new JSONObject();
-        JSONObject red3 = new JSONObject();
-        JSONObject blue1 = new JSONObject();
-        JSONObject blue2 = new JSONObject();
-        JSONObject blue3 = new JSONObject();
+        JSONObject red1 = new JSONObject("{\"Alliance Station\":\"Red 1\"}");
+        JSONObject red2 = new JSONObject("{\"Alliance Station\":\"Red 2\"}");
+        JSONObject red3 = new JSONObject("{\"Alliance Station\":\"Red 3\"}");
+        JSONObject blue1 = new JSONObject("{\"Alliance Station\":\"Blue 1\"}");
+        JSONObject blue2 = new JSONObject("{\"Alliance Station\":\"Blue 2\"}");
+        JSONObject blue3 = new JSONObject("{\"Alliance Station\":\"Blue 3\"}");
 
         for(int i = 1; i < matchArray.length(); i++){
             JSONObject match = (JSONObject) matchArray.get(i - 1);
